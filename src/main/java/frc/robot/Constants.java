@@ -17,8 +17,8 @@ public final class Constants {
     public static final int kDriverControllerPort = 0;
   }
   public static class VictorSPPorts {
-    public static final int kLeftMotorGroupPort = 0;
-    public static final int kRightMotorGroupPort = 1;
+    public static final int kLeftMotorControllerGroupPort = 0;
+    public static final int kRightMotorControllerGroupPort = 1;
     public static final int kMidMotorPort = 2;
 
 

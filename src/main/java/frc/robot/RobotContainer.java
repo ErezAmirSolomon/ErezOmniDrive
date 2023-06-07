@@ -6,6 +6,7 @@ package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.subsystems.DriveTrain;
+import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 
@@ -41,6 +42,8 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
+
+    m_driveTrain.setDefaultCommand(new RunCommand(() -> m_driveTrain.Move(m_driverController.getLeftX(), m_driverController.getLeftY(), m_driverController.getRightX()),m_driveTrain));
     // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
 
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,

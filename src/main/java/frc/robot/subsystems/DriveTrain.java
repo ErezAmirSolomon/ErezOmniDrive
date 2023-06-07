@@ -19,14 +19,13 @@ public class DriveTrain extends SubsystemBase {
   public DifferentialDrive m_DifferentialDrive;
 
   public DriveTrain() {
-    m_frontLeftMotorController = new VictorSP(VictorSPPorts.kLeftMotorGroupPort);
-    m_rearLeftMotorController = new VictorSP(VictorSPPorts.kLeftMotorGroupPort);
-    m_frontRightMotorController = new VictorSP(VictorSPPorts.kRightMotorGroupPort);
-    m_rearRightMotorController = new VictorSP(VictorSPPorts.kRightMotorGroupPort);
-    m_midMotorController = new VictorSP(VictorSPPorts.kMidMotorPort);
-
+    m_frontLeftMotorController = new VictorSP(VictorSPPorts.kLeftMotorControllerGroupPort);
+    m_rearLeftMotorController = new VictorSP(VictorSPPorts.kLeftMotorControllerGroupPort);
     m_leftMotorControllerGroup = new MotorControllerGroup(m_frontLeftMotorController, m_rearLeftMotorController);
+    m_frontRightMotorController = new VictorSP(VictorSPPorts.kRightMotorControllerGroupPort);
+    m_rearRightMotorController = new VictorSP(VictorSPPorts.kRightMotorControllerGroupPort);
     m_rightMotorControllerGroup = new MotorControllerGroup(m_frontRightMotorController, m_rearRightMotorController);
+    m_midMotorController = new VictorSP(VictorSPPorts.kMidMotorPort);
 
     m_rightMotorControllerGroup.setInverted(true);
 
